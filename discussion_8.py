@@ -14,13 +14,12 @@ def getLink(soup):
 # Task 3: Get the details from the box titled "College/school founding". Get all the college/school names and the year they were
 # founded and organize the same into key-value pairs.
 def getAdmissionsInfo2019(soup):
+    soup = getLink(soup)
     soup_dict = {}
     tags = soup.find('p',class_ = "wilitable sortable jquery-tables orter")
     for val in range(len(tags)):
         soup_dict[val] = tags[val]
-        
-
-
+    return soup_dict        
 
 
 
